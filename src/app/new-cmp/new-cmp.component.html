@@ -1,0 +1,24 @@
+{{newcomponent}}
+<div> Months :
+   <select>
+      <option *ngFor="let i of months">{{i}}</option>
+   </select>
+</div>
+<p>
+  new-cmp works!
+</p>
+<div><span *ngIf="isSetvariable;then condition1 else condition2">It get displayed if the variable is true</span>
+<ng-template #condition1>condition valid</ng-template>
+<ng-template #condition2>condition not valid</ng-template>
+</div>
+<div>
+<button (click)="onClickEvent($event)">Click me to call method</button>
+</div>
+<div>
+<h3>For pipe in angular</h3>
+Date :{{todaydate|date:'d/M/yyyy'}}
+Month:{{months|slice:2:6}}
+Currency:{{6985.5|currency:"USD"}}
+JSON:{{jsonval|json}}
+
+</div>
